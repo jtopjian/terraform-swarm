@@ -4,19 +4,22 @@ This repo contains helper scripts to set up RAC infrastructure for the hands-on 
 
 ## Prerequisites
 
-* Create a key in the `key` directory: `cd key; ssh-keygen -t rsa -N '' -f id_rsa`.
 * Make sure you have IPv6 connectivity.
 * Do not install Docker Engine.
+* Install [Terraform](https://www.terraform.io/downloads.html).
 * Install [Docker Toolbox](https://github.com/docker/toolbox/releases/tag/v1.12.5) (pkg file for Mac).
 * Install [docker-machine](https://docs.docker.com/machine/install-machine/).
 * Install [docker-compose](https://docs.docker.com/compose/install/) (Ignore step 1).
-* Check out the https://github.com/jpetazzo/orchestration-workshop repo to this same directory: `git clone https://github.com/jpetazzo/orchestration-workshop`
+* Creating a Floating IP in RAC. Skip if you already have one you can use.
+* Create a security group in RAC that allows all traffic. Skip if you already have one.
 
 ## Deployment
 
-* Manually create a floating IP.
-* Manually create an "allow all" security group.
-* Add them to `main.tf`.
+* Clone this repository to your desktop: `git clone https://github.com/jtopjian/terraform-swarm`.
+* Change to that directory: `cd terraform-swarm`.
+* Clone the https://github.com/jpetazzo/orchestration-workshop repo: `git clone https://github.com/jpetazzo/orchestration-workshop`
+* Create a key in the `key` directory: `cd terraform-swarm/key; ssh-keygen -t rsa -N '' -f id_rsa`.
+* Edit `main.tf` and replace `CHANGEME` with your Floating IP and your Security Group name.
 * Run `terraform apply`.
 * If you need to start from scratch, run `bash files/destroy.sh`.
 
