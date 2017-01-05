@@ -11,7 +11,7 @@ This repo contains helper scripts to set up RAC infrastructure for the hands-on 
 * Install [docker-machine](https://docs.docker.com/machine/install-machine/) (Only do Steps 2 and 3.
 * Install [docker-compose](https://docs.docker.com/compose/install/) (Only do Steps 4 to 7).
 * Creating a Floating IP in RAC. Skip if you already have one you can use.
-* Create a security group in RAC that allows all traffic. Skip if you already have one.
+* Create a security group in RAC that allows all traffic (all tcp, udp, icmp, ipv4, ipv6). Skip if you already have one.
 
 ## Deployment
 
