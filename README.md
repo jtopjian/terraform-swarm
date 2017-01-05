@@ -8,8 +8,8 @@ This repo contains helper scripts to set up RAC infrastructure for the hands-on 
 * Do not install Docker Engine.
 * Install [Terraform](https://www.terraform.io/downloads.html).
 * Install [Docker Toolbox](https://github.com/docker/toolbox/releases/tag/v1.12.5) (pkg file for Mac).
-* Install [docker-machine](https://docs.docker.com/machine/install-machine/).
-* Install [docker-compose](https://docs.docker.com/compose/install/) (Ignore step 1).
+* Install [docker-machine](https://docs.docker.com/machine/install-machine/) (Only do Steps 2 and 3.
+* Install [docker-compose](https://docs.docker.com/compose/install/) (Only do Steps 4 to 7).
 * Creating a Floating IP in RAC. Skip if you already have one you can use.
 * Create a security group in RAC that allows all traffic. Skip if you already have one.
 
