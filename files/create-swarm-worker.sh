@@ -9,7 +9,7 @@ floating_ip="$6"
 
 really=$(echo $worker_ipv6 | tr -d "[]")
 
-docker-machine create --driver generic --generic-ip-address $really --generic-ssh-key=key/id_rsa -generic-ssh-user=ubuntu --engine-opt insecure-registry=${floating_ip}:5000 $worker_name
+docker-machine create --driver generic --generic-ip-address $really --generic-ssh-key=key/id_rsa --generic-ssh-user=ubuntu --engine-opt insecure-registry=${floating_ip}:5000 $worker_name
 
 eval $(docker-machine env $manager_name)
 TOKEN=$(docker swarm join-token -q worker)
