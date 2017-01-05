@@ -7,7 +7,7 @@ floating_ip="$4"
 
 really=$(echo $manager_ipv6 | tr -d "[]")
 
-docker-machine create --driver generic --generic-ip-address $really --generic-ssh-key=key/id_rsa -generic-ssh-user=ubuntu --engine-opt insecure-registry=${floating_ip}:5000 $manager_name
+docker-machine create --driver generic --generic-ip-address $really --generic-ssh-key=key/id_rsa --generic-ssh-user=ubuntu --engine-opt insecure-registry=${floating_ip}:5000 $manager_name
 
 eval $(docker-machine env $manager_name)
 
