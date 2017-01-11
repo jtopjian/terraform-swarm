@@ -20,6 +20,7 @@ This repo contains helper scripts to set up RAC infrastructure for the hands-on 
 * Clone the https://github.com/jpetazzo/orchestration-workshop repo: `git clone https://github.com/jpetazzo/orchestration-workshop`
 * Create a key in the `key` directory: `cd terraform-swarm/key; ssh-keygen -t rsa -N '' -f id_rsa`.
 * Edit `main.tf` and replace `CHANGEME` with your Floating IP and your Security Group name.
+* Source your RAC `openrc` file: `source /path/to/rac-openrc.sh`
 * Run `terraform apply`.
 * If you need to start from scratch, run `bash files/destroy.sh`.
 
